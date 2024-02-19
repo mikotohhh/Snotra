@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package stringprocessor;
+
+// The string processing service definition.
+service StringProcessor {
+  // Sends a string and receives a response
+  rpc Response (PromptRequest) returns (PromptReply) {}
+}
+
+// The request message containing the string.
+message PromptRequest {
+  string input = 1;
+}
+
+// The response message containing the processed string.
+message PromptReply {
+  string output = 1;
+}
